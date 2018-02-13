@@ -64,5 +64,20 @@ public class UserController {
     	this.logger.info("Get the complete list of user");
     	return userService.getAll();
     }
+	
+	/**
+	 * Update user 5 values
+	 * @return
+	 */
+	@CrossOrigin
+    @RequestMapping("/update-user-5")
+    public @ResponseBody List<User> updateUser() {
+        
+		this.logger.info("Update user 5 values");
+		userService.updateUser();
+		
+    	this.logger.info("Get the complete list of user");
+    	return userService.getAll();
+    }
     
 }
