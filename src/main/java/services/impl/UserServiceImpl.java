@@ -22,4 +22,15 @@ public class UserServiceImpl implements UserService {
 		return users;
 	}
 
+	@Override
+	public void addUser() {
+		User newUser = 
+			new User(
+				"firstNameUserBen", 
+				"lastNameUserBen",
+				"softwareDeveloperBen");
+		
+		this.userRepository.save(newUser);
+	}
+
 }

@@ -47,5 +47,22 @@ public class UserController {
     	
     	return userService.getAll();
     }
+	
+	/**
+     * Add user with values ending with first 3 letters of candidate name
+     * @param
+     * @return the users
+     */
+	@CrossOrigin
+    @RequestMapping("/add-user-ben")
+    public @ResponseBody List<User> addUser() {
+        
+		this.logger.info("Add user with values ending "
+				+ "with first 3 letters of candidate name");
+		userService.addUser();
+		
+    	this.logger.info("Get the complete list of user");
+    	return userService.getAll();
+    }
     
 }
